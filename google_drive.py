@@ -92,7 +92,7 @@ class GoogleDriver:
         # The file token.json stores the user's access and refresh tokens, and is
         # created automatically when the authorization flow completes for the first
         # time.
-        if os.path.exists('token.json'):
+        if os.path.exists('token.json') or os.environ["SECRET_TOKEN"] is not None:
             if prod_mode: #Use the secret token
                 with open('temp_token.json', 'w') as f:
                     json_str = base64.b64decode(os.environ["SECRET_TOKEN"]).decode('utf-8')
