@@ -1,7 +1,4 @@
 name: run update_drive.py
-
-name: run main.py
-
 on:
   push:
     branches:    
