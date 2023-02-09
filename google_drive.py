@@ -1,9 +1,11 @@
 from typing import Optional, Type
 import os
 import io
+import base64
 import json
 import logging
 import logging.handlers
+
 
 import google.auth
 from google.auth.transport.requests import Request
@@ -93,7 +95,8 @@ class GoogleDriver:
         if os.path.exists('token.json'):
             if prod_mode: #Use the secret token
                 with open('temp_token.json', 'w') as f:
-                    json.dump(json.loads(os.environ["SECRET_TOKEN"]), f)
+                    json_str = base64.b64decode(os.environ["SECRET_TOKEN"]).decode('utf-8')
+                    json.dump(json.loads(json_str), f)
                 creds = Credentials.from_authorized_user_file('temp_token.json', SCOPES)
             else:
                 creds = Credentials.from_authorized_user_file('token.json', SCOPES)

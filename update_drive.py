@@ -19,6 +19,6 @@ def push_file_to_drive(file_path: str, collab_notebook_name: str):
 # 1) Add os env vars
 # 2) Connect to github actions
 if __name__ == '__main__':
-    file_path = os.environ["upload_file_path"]
-    collab_notebook_name = os.environ["collab_notebook_name"]
+    file_path = os.environ["UPLOAD_FILE_PATH"]
+    collab_notebook_name = os.environ["COLLAB_NOTEBOOK_NAME"]
     push_file_to_drive(file_path, collab_notebook_name)
