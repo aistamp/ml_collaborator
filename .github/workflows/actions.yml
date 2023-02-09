@@ -29,5 +29,5 @@ jobs:
           UPLOAD_FILE_PATH: ${{ vars.UPLOAD_FILE_PATH }}
           COLLAB_NOTEBOOK_NAME: ${{ vars.COLLAB_NOTEBOOK_NAME }}
 
-        run: python main.py
+        run: python update_drive.py
           
