@@ -28,7 +28,9 @@ jobs:
           
       - name: execute py script # run main.py
         env:
-          TOKEN_INFO: ${{ secrets.SOME_SECRET }}
-          FILE
+          SECRET_TOKEN: ${{ secrets.SECRET_TOKEN }}
+          UPLOAD_FILE_PATH: ${{ vars.UPLOAD_FILE_PATH }}
+          COLLAB_NOTEBOOK_NAME: ${{ vars.COLLAB_NOTEBOOK_NAME }}
+
         run: python main.py
           
