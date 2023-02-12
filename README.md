@@ -16,7 +16,7 @@ Conviniently use Github with Google Collab
 
      https://developers.google.com/drive/api/quickstart/python
 
-  ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/images/gdocs_screen.jpg?raw=true)
+  ![Drive Setup screenshot](https://github.com/[username]/[reponame]/blob/[branch]/images/gdocs_screen.jpg?raw=true)
 
 
  b)  Make sure to enable the following scopes when creating the Google cloud project
@@ -93,9 +93,9 @@ For more information, see this thread: https://github.com/google-github-actions/
     And in the "Secret" field paste the contents of your `output.txt`
     Then hit "Add secret"
     
- ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/images/secret_screen.jpg?raw=true)
+ ![Github actions Secret Screenshot](https://github.com/[username]/[reponame]/blob/[branch]/images/secret_screen.jpg?raw=true)
 
- ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/images/config_screen.jpg?raw=true)
+ ![Config file Screenshot](https://github.com/[username]/[reponame]/blob/[branch]/images/config_screen.jpg?raw=true)
 
 
 ## Downloading a file
