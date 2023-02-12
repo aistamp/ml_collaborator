@@ -15,9 +15,8 @@ Conviniently use Github with Google Collab
      and "Authorize credentials for desktop application" sections
 
      https://developers.google.com/drive/api/quickstart/python
-
-  ![Drive Setup screenshot](https://github.com/[username]/[reponame]/blob/[branch]/images/gdocs_screen.jpg?raw=true)
-
+   
+   <kbd><img src="https://github.com/aistamp/ml_collaborator/blob/main/images/gdocs_screen.png?raw=true" /></kbd>
 
  b)  Make sure to enable the following scopes when creating the Google cloud project
  
@@ -92,10 +91,11 @@ For more information, see this thread: https://github.com/google-github-actions/
     In the "Name" field put "SECRET_TOKEN"
     And in the "Secret" field paste the contents of your `output.txt`
     Then hit "Add secret"
-    
- ![Github actions Secret Screenshot](https://github.com/[username]/[reponame]/blob/[branch]/images/secret_screen.jpg?raw=true)
+  
+ <kbd><img src="https://github.com/aistamp/ml_collaborator/blob/main/images/secret_screen.png?raw=true" /></kbd>
+ ![Github actions Secret Screenshot](https://github.com/aistamp/ml_collaborator/blob/main/images/secret_screen.png?raw=true)
 
- ![Config file Screenshot](https://github.com/[username]/[reponame]/blob/[branch]/images/config_screen.jpg?raw=true)
+ ![Config file Screenshot](https://github.com/aistamp/ml_collaborator/blob/main/images/config_screen.png?raw=true)
 
 
 ## Downloading a file
