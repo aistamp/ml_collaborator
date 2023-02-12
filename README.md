@@ -1,6 +1,11 @@
 # ML Collaborator
 Conviniently use Github with Google Collab
 
+## Features
+ - Run a script to download collaboratory notebooks from Google Drive and convert them into Jupyter notebook files
+ - Automatically update collab notebooks whenever you push to github
+ - Lets you and your teammates easily collaborate on any ML project with git while taking advantage of GPU options on Google Collab for training larger models
+
 ## Set up
 #### 1) Either fork this repo or create a new one for this project, copying over the following files (preserving the path)
    - .github/workflows/actions.yml
