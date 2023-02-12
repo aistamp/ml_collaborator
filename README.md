@@ -64,20 +64,14 @@ For more information, see this thread: https://github.com/google-github-actions/
     IMPORTANT: The token files will at some point expire. When this happens, simply repeat this step for a new token file 
     (and then repeat the following step with the token environment variable)
 
-#### 5) Set your environment variable
+#### 5) Set your environment variables/config
  The script expects the following variable:
-   - COLLAB_NOTEBOOK_NAME: Name of the collab notebook in your Google Drive
-   - UPLOAD_FILE_PATH: Path to your local notebook
    - SECRET_TOKEN: The base64 encoded token
 
  **Set Env. variable locally** (for Mac and Linux)
  
  `export SECRET_TOKEN=$(cat output.txt)`
  
- `export COLLAB_NOTEBOOK_NAME=<YOUR NOTEBOOK NAME>`
- 
- `export UPLOAD_FILE_PATH=<YOUR FILEPATH>`
-
  **Set Env. variable in Github**
  a) Copy the contents of your `output.txt` file
  
@@ -91,14 +85,13 @@ For more information, see this thread: https://github.com/google-github-actions/
     In the "Name" field put "SECRET_TOKEN"
     And in the "Secret" field paste the contents of your `output.txt`
     Then hit "Add secret"
+
   
  <kbd><img src="https://github.com/aistamp/ml_collaborator/blob/main/images/secret_screen.png?raw=true" /></kbd>
- ![Github actions Secret Screenshot](https://github.com/aistamp/ml_collaborator/blob/main/images/secret_screen.png?raw=true)
 
- ![Config file Screenshot](https://github.com/aistamp/ml_collaborator/blob/main/images/config_screen.png?raw=true)
+ Finally, edit the `collab_config.json` file (see below)
 
-
-## Downloading a file
+## Downloading from Drive
 Run this script if you wish to fetch the latest version of you collab notebook file
 from your Google Drive to your working directory
 
@@ -106,13 +99,22 @@ Ex: `python3 download_file.py --collab_notebook_name "Test Book" --save_path "te
 Will download a Collaboratory Notebook named "Test Book" and create a new file with the path `test_notebooks/test.ipynb`
 in your working directory
 
-## Uploading a file
+## Updating Collab files in Google Drive
+#### Updating One file
+
+Run the following command
+` python3 update_drive.py --use_single_file --collab_notebook_name "<YOUR COLLAB NOTEBOOK IN YOUR GOOGLE DRIVE>" --save_path <PATH TO YOUR LOCAL FILE>`
+
+#### Updating many files
+
+In the `collab_config.json` file, add the files that you want to update. Each file will be in dictionary format
+with the following fields required for each file: `collab_notebook_name`, `file_path`
+
+<kbd><img src="https://github.com/aistamp/ml_collaborator/blob/main/images/config_screen.png?raw=true" /></kbd>
+
+Then run `python3 update_drive.py --notebook_config collab_config.json`
+
 NOTE: This script will run automatically everytime you push changes to github
-
-But you can run this script if you wish to manually update your collab notebook file
-from your Google Drive to your working directory by running: `python3 update_drive.py`
-
-NOTE: if you wish to upload another notebook, simply change the env variables for 
 
 ## Contributing
 At the current state, this project, small as it is, can of course be improved.

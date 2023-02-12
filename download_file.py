@@ -6,9 +6,6 @@
         -> Ran a long GPU intensive job on collab and would like to get latest version of notebook with outputs
 '''
 import argparse
-import logging
-import logging.handlers
-import os
 from google_drive import GoogleDriver, init_logger
 
 
@@ -17,10 +14,8 @@ def get_file_from_drive(collab_notebook_name: str, save_path: str):
     gd = GoogleDriver()
     gd.download_file(collab_notebook_name, save_path, logger)
 
-#1) Add arg parse
-#2): Add logging
 if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Process some integers.')
+    parser = argparse.ArgumentParser(description='Download Collab file from drive to local comp.')
     parser.add_argument('--collab_notebook_name', required=True,
                         help='Name of the notebook in drive to download')
     

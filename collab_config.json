@@ -1,0 +1,11 @@
+[
+    {
+        "collab_notebook_name": "Test Book",
+        "file_path": "test.ipynb"
+    },
+
+    {
+        "collab_notebook_name": "Test Book Two",
+        "file_path": "test_two.ipynb"
+    }
+]

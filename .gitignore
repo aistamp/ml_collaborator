@@ -50,6 +50,7 @@ env.bak/
 venv.bak/
 
 # Gitignore specific to this project
-*.json
+credentials.json
+token.json
 output.txt
 test_notebooks/
